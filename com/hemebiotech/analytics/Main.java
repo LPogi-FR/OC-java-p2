@@ -1,21 +1,16 @@
 package com.hemebiotech.analytics;
 
-import java.util.List;
-import java.util.Map;
-
-// WRITE YOUR CODE HERE
-// public class Main{
-
-//     public final ISymptomReader  reader ;
-//     public final ISymptomWriter writer ;
-//     public final AnalyticsCounter counter;
+public class Main{
 
 
-//     public main(ISymptomReader reader, ISymptomWriter writer,AnalyticsCounter counter){
+    public static void main(String[] args) {
 
-    
+        ISymptomReader reader = new ReadSymptomDataFromFile("symptoms.txt");
+        ISymptomWriter writer = new WriteSymptomDataToFile();
+        AnalyticsCounter counter = new AnalyticsCounter(reader,writer);
+        writer.writeSymptoms(counter.sortSymptoms( counter.countSymptoms(counter.getSymptoms())));
 
-//     }
+    }
 
 
-// }
+}
