@@ -5,16 +5,11 @@ import java.io.IOException;
 import java.util.Map;
 
 
-/**.
-* Anything that will read symptom data from a source;
-* The important part is, the return value from the operation, which is a list of strings,
-* that may contain many duplications.
-* The implementation does not need to order the list.
+/**
+* Implementation of the interface  ISymptomWriter to write data to a new file.
 */
 public class WriteSymptomDataToFile implements ISymptomWriter {
-  /** 
-   Attribute with the name of the output File.
-  */
+
   private final String fileOutput = "result.out";
 
   @Override

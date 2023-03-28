@@ -53,6 +53,9 @@ public class AnalyticsCounter {
     return new TreeMap<>(symptoms);
   }
 
+  /**
+  * Implement the interface to write the symptom and his occurence to a file.
+  */
   public void writeSymptoms(Map<String, Integer> symptoms) {
     writer.writeSymptoms(symptoms);
   }

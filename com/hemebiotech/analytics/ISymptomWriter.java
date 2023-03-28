@@ -7,5 +7,9 @@ import java.util.Map;
  *
  */
 public interface ISymptomWriter {
+  /**
+  * Take a map's data and transpose it on text format on a new file.
+  * @param symptoms a {@link Map} with the number of occurrences for each symptom.
+  */
   public void writeSymptoms(Map<String, Integer> symptoms);
 }
